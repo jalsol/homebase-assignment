@@ -1,0 +1,2 @@
+class ProductParser:
+    pass
