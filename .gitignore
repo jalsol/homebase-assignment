@@ -161,4 +161,4 @@ cython_debug/
 
 # Files from task3
 task3/downloaded_files/
-task3/data.json
+task3/data.sqlite
