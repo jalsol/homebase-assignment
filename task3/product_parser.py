@@ -32,11 +32,12 @@ class ProductParser:
             item_ext = item.find(class_='ext')
             key = LITERAL_TO_KEY.get(item_title, item_title)
 
+            if item_value.endswith(' PN') and key == 'bedrooms_count':
+                item_value = item_value[:-3]
+
+            self.data[key] = item_value
             if item_ext:
-                item_ext = item_ext.text.strip()
-                self.data[key] = { 'value': item_value, 'ext': item_ext }
-            else:
-                self.data[key] = { 'value': item_value }
+                self.data[f'{key}_ext'] = item_ext.text.strip()
 
     def _parse_description(self):
         description = self.soup.find(class_='re__section-body')
