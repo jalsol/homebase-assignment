@@ -159,5 +159,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# Downloaded files from task3
-task3/downloaded_files
+# Files from task3
+task3/downloaded_files/
+task3/data.json
