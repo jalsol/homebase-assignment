@@ -1,0 +1,9 @@
+$ time python3 hierarchical_to_nested_set.py
+Executed in   28.07 secs    fish           external
+   usr time    0.63 secs  827.00 micros    0.63 secs
+   sys time    1.89 secs  149.00 micros    1.89 secs
+
+$ time python3 retrieve_parent_child_relationship.py
+Executed in   87.10 millis    fish           external
+   usr time  121.26 millis   55.30 millis   65.96 millis
+   sys time   25.20 millis    4.59 millis   20.61 millis

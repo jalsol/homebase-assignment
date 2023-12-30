@@ -5,8 +5,8 @@ import shortuuid
 import random
 
 
-MAX_DEPTH = 10
-MAX_CHILDREN = 2
+MAX_DEPTH = 5
+MAX_CHILDREN = 10
 
 
 def counter_generator():
