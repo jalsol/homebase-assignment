@@ -40,7 +40,7 @@ class ProductParser:
 
     def _parse_description(self):
         description = self.soup.find(class_='re__section-body')
-        self.data['description'] = description.text if description else ''
+        self.data['description'] = description.text.strip() if description else ''
 
     def parse(self):
         self._parse_product_id()
