@@ -35,6 +35,11 @@ To create the schema:
 
 The solution for this task is in the `task3/` directory.
 
+- `main.py`: The script that scrapes the data from the website.
+- `scraper.py`: Scraper class for scraping the data from an URL of multiple products.
+- `product_parser.py`: Parser class for parsing the data from the HTML of a product page.
+- `cache_schema.sql`: The SQL script that creates the tables and relationships for the cache schema.
+
 ### Usage
 
 To run the script:
