@@ -14,6 +14,10 @@ class ProductParser:
         self.soup = BeautifulSoup(self.page_source, 'html.parser')
         self.data = {}
 
+    def _parse_product_id(self):
+        product_info = self.soup.find(class_='re__pr-info')
+        self.data['id'] = product_info['prid']
+
     def _parse_address(self):
         address = self.soup.find(class_='js__pr-address')
         if address:
@@ -39,6 +43,7 @@ class ProductParser:
         self.data['description'] = description.text if description else ''
 
     def parse(self):
+        self._parse_product_id()
         self._parse_address()
         self._parse_short_info_items()
         self._parse_description()
