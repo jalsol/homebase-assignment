@@ -77,3 +77,18 @@ To run the script:
 - Populate the database with `python3 data_gen.py`.
 - Convert the data to nested set model with `python3 hierarchical_to_nested_set.py`.
 - Retrieve the data from nested set model with `python3 retrieve_parent_child_relationship.py`.
+
+## Task 5: Database and SQL - Stored Procedure Creation
+
+The solution for this task is in the `task5/` directory.
+
+- `schema.sql`: The SQL script that creates the tables and relationships for the schema.
+- `procedure.sql`: The SQL script that creates the stored procedure.
+
+### Usage
+
+To create the schema:
+- Create a database in MariaDB.
+- Run the script with `mysql -u <username> -p <database_name> < schema.sql` to create the tables.
+- Run the script with `mysql -u <username> -p <database_name> < procedure.sql` to create the stored procedure.
+- The schema should be created in the database.
