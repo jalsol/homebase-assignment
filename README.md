@@ -30,3 +30,18 @@ To create the schema:
 - Create a database in MariaDB.
 - Run the script with `mysql -u <username> -p <database_name> < schema.sql`.
 - The schema should be created in the database.
+
+## Task 3: Web Scraping - Real Estate Data from Batdongsan.com
+
+The solution for this task is in the `task3/` directory.
+
+### Usage
+
+To run the script:
+- Setup a virtual environment with `python3 -m venv venv`.
+- Activate the virtual environment with `source venv/bin/activate`.
+- Install the dependencies with `pip3 install -r requirements.txt`.
+- Install `sqlite3`.
+- Copy the `.env.example` file to `.env` and modify the variables to the desired values.
+- Modify the `URL` variable in `main.py` to the desired URL.
+- Run the script with `python3 main.py`.

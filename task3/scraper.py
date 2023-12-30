@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from dotenv import dotenv_values
 from enum import IntEnum
 from product_parser import ProductParser
 
@@ -8,10 +9,13 @@ import time
 import undetected_chromedriver as uc
 
 
-CHROMIUM_EXECUTABLE_PATH = '/usr/bin/brave-browser-beta'
-USER_DATA_DIR = '/home/jalsol/.config/BraveSoftware/Brave-Browser-Beta'
-CLOUDFLARE_TIMEOUT = 5
-CACHE_DURATION = 86400 # 1 day
+env_config = dotenv_values(".env")
+
+CHROMIUM_EXECUTABLE_PATH = env_config["CHROMIUM_EXECUTABLE_PATH"]
+USER_DATA_DIR = env_config["USER_DATA_DIR"]
+CLOUDFLARE_TIMEOUT = int(env_config["CLOUDFLARE_TIMEOUT"])
+CACHE_DURATION = int(env_config["CACHE_DURATION"])
+
 
 class CacheDatabaseIndex(IntEnum):
     ID = 0
