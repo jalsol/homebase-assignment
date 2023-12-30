@@ -45,3 +45,30 @@ To run the script:
 - Copy the `.env.example` file to `.env` and modify the variables to the desired values.
 - Modify the `URL` variable in `main.py` to the desired URL.
 - Run the script with `python3 main.py`.
+
+## Task 4: Nested Set Model Implementation
+
+The solution for this task is in the `task4/` directory.
+
+- `data_gen.py`: The script that generates the data for the nested set model.
+- `hierarchical_to_nested_set.py`: The script that converts the data from hierarchical model to nested set model.
+- `retrieve_parent_child_relationship.py`: The script that retrieves the parent-child relationship from the nested set model.
+- `schema.sql`: The SQL script that creates the tables and relationships for the schema.
+- `benchmark.txt`: The output after benchmarking the performance of the above scripts.
+
+There are also 2 example data files in the `task4/` directory:
+- `small_example.csv`: The data file with 14 nodes.
+- `large_example.csv`: The data file with 5018 nodes.
+
+### Usage
+
+To run the script:
+- Setup a virtual environment with `python3 -m venv venv`.
+- Activate the virtual environment with `source venv/bin/activate`.
+- Install the dependencies with `pip3 install -r requirements.txt`.
+- Install `sqlite3`.
+- Create tables with `sqlite3 data.sqlite < schema.sql`.
+- Modify the `MAX_DEPTH` and `MAX_CHILDREN` variables in `data_gen.py` to the desired value.
+- Populate the database with `python3 data_gen.py`.
+- Convert the data to nested set model with `python3 hierarchical_to_nested_set.py`.
+- Retrieve the data from nested set model with `python3 retrieve_parent_child_relationship.py`.
